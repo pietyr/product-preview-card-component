@@ -1,3 +1,14 @@
+:root {
+	--dark-cyan: hsl(158, 36%, 37%);
+	--cream: hsl(30, 38%, 92%);
+
+	--very-dark-blue: hsl(212, 21%, 14%);
+	--dark-grayish-blue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
+
+	--paragraph-font-size: 0.875rem;
+}
+
 html {
 	box-sizing: border-box;
 }
@@ -6,4 +17,113 @@ html {
 *::before,
 *::after {
 	box-sizing: inherit;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+	background-color: var(--cream);
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+
+	font-size: var(--paragraph-font-size);
+	color: var(--dark-grayish-blue);
+}
+
+main {
+	flex-grow: 1;
+}
+
+article {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1.5rem 1rem;
+	border-radius: 0.5rem;
+	background-color: var(--white);
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+section {
+	padding: 0.5rem 1.5rem 1.5rem;
+}
+
+.category {
+	text-transform: uppercase;
+	letter-spacing: 0.375em;
+}
+
+h1 {
+	font-family: "Fraunces", serif;
+	font-weight: 700;
+	font-size: 2rem;
+	color: var(--very-dark-blue);
+}
+
+.description {
+	line-height: 1.5;
+}
+
+.price {
+	font-family: "Fraunces", serif;
+	font-weight: 700;
+	font-size: 2rem;
+	color: var(--dark-cyan);
+}
+
+.old-price {
+	text-decoration: line-through;
+	margin-left: 1rem;
+	vertical-align: calc(var(--paragraph-font-size) / 2);
+}
+
+button {
+	/* Basic styling and  overriding default styles for different browsers*/
+	font-family: inherit;
+	font-size: var(--paragraph-font-size);
+	line-height: 100%;
+	margin: 0;
+	overflow: visible;
+	text-transform: none;
+	border: none;
+	-webkit-appearance: button;
+
+	font-weight: 700;
+	color: var(--white);
+	background-color: var(--dark-cyan);
+	width: 100%;
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+svg {
+	width: var(--paragraph-font-size);
+	height: 0.9375rem;
+	margin-right: 0.5rem;
+}
+
+.category,
+h1,
+.description,
+.price-wrapper,
+button {
+	margin-bottom: 0;
+	margin-top: 1rem;
+}
+
+footer {
+	flex-grow: 0;
+	margin: auto 1rem 0.5rem;
+}
+
+@media (min-height: 700px) {
 }
