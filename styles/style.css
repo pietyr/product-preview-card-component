@@ -123,7 +123,28 @@ button {
 footer {
 	flex-grow: 0;
 	margin: auto 1rem 0.5rem;
+	font-size: 0.75rem;
 }
 
-@media (min-height: 700px) {
+footer a {
+	text-decoration: none;
+	color: var(--very-dark-blue);
+	font-weight: 700;
+}
+
+@media (min-width: 700px) {
+	main {
+		max-width: 50%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	article {
+		flex-wrap: nowrap;
+	}
+
+	section {
+		max-width: 50%;
+	}
 }
